@@ -1,4 +1,4 @@
-rootProject.name = "infrastructure-gradle-plugin-java-toolchain-resolver"
+rootProject.name = "gradle-dependency-resolution-plugin "
 
 pluginManagement {
     repositories {
