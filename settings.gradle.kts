@@ -1,4 +1,4 @@
-rootProject.name = "gradle-dependency-resolution-plugin "
+rootProject.name = "gradle-dependency-resolution-plugin"
 
 pluginManagement {
     repositories {
