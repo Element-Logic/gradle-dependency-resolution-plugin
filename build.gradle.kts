@@ -36,7 +36,7 @@ gradlePlugin {
             - MAVEN_DOWNLOAD_URL: the base URL for the maven repository
             - MAVEN_USER: the username for the maven repository (optional)
             - MAVEN_PASSWORD: the password for the maven repository (optional)
-            
+
             The JDK is expected to be in the form of a maven coordinate:
             [MAVEN_DOWNLOAD_URL]/jdk/vendor/version/os/architecture/vendor-jdk-version-os-architecture.zip
         """.trimIndent()
@@ -47,7 +47,7 @@ gradlePlugin {
         id = "com.supcis.dependency-resolution"
         implementationClass = "com.supcis.infrastructure.gradle.DependencyResolutionPlugin"
         description = """
-            Adds a maven repository to the dependency resolution configuration that is configured 
+            Adds a maven repository to the dependency resolution configuration that is configured
             via environment variables:
             - MAVEN_DOWNLOAD_URL: the base URL for the maven repository
             - MAVEN_USER: the username for the maven repository (optional)
@@ -60,7 +60,7 @@ gradlePlugin {
         id = "com.supcis.plugin-resolution"
         implementationClass = "com.supcis.infrastructure.gradle.PluginResolutionPlugin"
         description = """
-            Adds a maven repository to the plugin resolution configuration that is configured 
+            Adds a maven repository to the plugin resolution configuration that is configured
             via environment variables:
             - MAVEN_DOWNLOAD_URL: the base URL for the maven repository
             - MAVEN_USER: the username for the maven repository (optional)
