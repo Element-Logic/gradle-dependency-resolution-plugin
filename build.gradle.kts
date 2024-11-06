@@ -1,11 +1,11 @@
 group = "com.supcis.plugins.gradle"
 
+version = "1.0.0"
+
 plugins {
     `java-gradle-plugin`
 
     id("org.jetbrains.kotlin.jvm") version "2.0.21"
-
-    id("com.supcis.version") version "0.1.0"
 
     id("com.gradle.plugin-publish") version "1.3.0"
 }
