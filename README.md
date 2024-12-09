@@ -26,7 +26,7 @@ Add the following lines to the `settings.gradle.kts`:
 
 ```settings.gralde.kts
 plugins {
-    id("com.supcis.java-toolchain-resolver") version "1.0.0"
+    id("com.supcis.java-toolchain-resolver") version "1.0.1"
 }
 ```
 
@@ -44,7 +44,7 @@ Add the following lines to the `settings.gradle.kts`:
 
 ```settings.gralde.kts
 plugins {
-    id("com.supcis.dependency-resolution") version "1.0.0"
+    id("com.supcis.dependency-resolution") version "1.0.1"
 }
 ```
 
@@ -62,7 +62,7 @@ Add the following lines to the `settings.gradle.kts`:
 
 ```settings.gralde.kts
 plugins {
-    id("com.supcis.plugin-resolution") version "1.0.0"
+    id("com.supcis.plugin-resolution") version "1.0.1"
 }
 ```
 
@@ -76,7 +76,7 @@ Add the following lines to the `settings.gradle.kts`:
 
 ```settings.gralde.kts
 plugins {
-    id("com.supcis.resolution") version "1.0.0"
+    id("com.supcis.resolution") version "1.0.1"
 }
 ```
 
