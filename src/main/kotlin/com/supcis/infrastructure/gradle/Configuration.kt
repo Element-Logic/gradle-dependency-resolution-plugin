@@ -3,6 +3,7 @@ package com.supcis.infrastructure.gradle
 import org.gradle.api.GradleException
 import org.gradle.api.artifacts.repositories.AuthenticationSupported
 import org.gradle.api.credentials.HttpHeaderCredentials
+import org.gradle.authentication.http.HttpHeaderAuthentication
 import org.gradle.internal.jvm.inspection.JvmVendor.KnownJvmVendor
 
 object Configuration {
@@ -39,7 +40,7 @@ fun AuthenticationSupported.setAuth() {
             it.value = "Bearer " + Configuration.password
         }
         authentication {
-            it.create("header")
+            it.create("header", HttpHeaderAuthentication::class.java)
         }
     } else {
         credentials {
