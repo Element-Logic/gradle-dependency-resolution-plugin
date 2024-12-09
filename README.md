@@ -1,14 +1,14 @@
 # Gradle Dependency Resolution Plugin
 
 This project contains three plugins that allow to configure a Java Toolchain Resolver, a Maven repo
-for Dependency Resolution and a Maven repo for Plugin Resolution via environment variables. And 
+for Dependency Resolution and a Maven repo for Plugin Resolution via environment variables. And
 there is a fourth plugin that applies all three plugins.
 
 ## Plugins
 
 ### Java Toolchain Resolver Plugin
 
-This Toolchain Resolver Plugin adds support for the 
+This Toolchain Resolver Plugin adds support for the
 [Gradle Toolchain Provisioning](https://docs.gradle.org/current/userguide/toolchains.html) starting
 from Gradle 8.
 
