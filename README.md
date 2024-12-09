@@ -82,4 +82,12 @@ plugins {
 
 # Release History
 
+## 1.0.1 fix auth via header
+
+Fixes the authentication via header to solve the error:
+
+>Cannot create a Authentication named 'header' because this container does not support creating
+>elements by name alone. Please specify which subtype of Authentication to create. Known subtypes
+>are: AwsImAuthentication, BasicAuthentication, DigestAuthentication, HttpHeaderAuthentication
+
 ## 1.0.0 initial release
