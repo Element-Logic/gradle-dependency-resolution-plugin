@@ -88,9 +88,14 @@ gradlePlugin {
         id = "com.supcis.resolution"
         implementationClass = "com.supcis.infrastructure.gradle.CombinedResolutionPlugin"
         description = """
-            Applies all three resolution plugins: JavaToolchainResolver, DependencyResolutionPlugin
-            and PluginResolutionPlugin. This is just for convenience.
+            Applies all four resolution plugins: JavaToolchainResolver, DependencyResolutionPlugin,
+            PluginResolutionPlugin and RemoteBuildCachePlugin. This is just for convenience.
         """.trimIndent()
-        tags.addAll("toolchain resolver", "dependency resolution", "plugin resolution")
+        tags.addAll(
+            "toolchain resolver",
+            "dependency resolution",
+            "plugin resolution",
+            "remote build cache",
+        )
     }
 }
