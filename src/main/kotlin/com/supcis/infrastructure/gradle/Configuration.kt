@@ -13,6 +13,8 @@ object Configuration {
     private val MAVEN_DOWNLOAD_URL = "MAVEN_DOWNLOAD_URL"
     private val MAVEN_USER = "MAVEN_USER"
     private val MAVEN_PASSWORD = "MAVEN_PASSWORD"
+    private val GRADLE_REMOTE_BUILD_CACHE_URL = "GRADLE_REMOTE_BUILD_CACHE_URL"
+    private val IS_PUSH_TO_REMOTE_BUILD_CACHE = "PUSH_TO_REMOTE_BUILD_CACHE"
 
     internal val DEFAULT_JDK_VENDOR = KnownJvmVendor.ADOPTIUM
 
@@ -31,6 +33,14 @@ object Configuration {
 
     val password: String? by lazy {
         System.getenv(MAVEN_PASSWORD) ?: "x"
+    }
+
+    val remoteBuildCacheUrl: String? by lazy {
+        System.getenv(GRADLE_REMOTE_BUILD_CACHE_URL)
+    }
+
+    val isPushToRemoteBuildCache: Boolean by lazy {
+        System.getenv(IS_PUSH_TO_REMOTE_BUILD_CACHE).toBoolean()
     }
 }
 

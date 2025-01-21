@@ -68,6 +68,21 @@ gradlePlugin {
         """.trimIndent()
         tags.add("plugin resolution")
     }
+    plugins.create("RemoteBuildCachePlugin") {
+        displayName = "Remote Build Cache Plugin"
+        id = "com.supcis.remote-build-cache"
+        implementationClass = "com.supcis.infrastructure.gradle.RemoteBuildCachePlugin"
+        description = """
+            Adds a remote build cache that is configured via environment variables:
+            - GRADLE_REMOTE_BUILD_CACHE_URL: the base URL for the remote build cache
+            - PUSH_TO_REMOTE_BUILD_CACHE: boolean value whether to push to the remote build cache
+              or to use it only for pulling. (optional, default: false)
+            - MAVEN_USER: the username for the maven repository (optional)
+            - MAVEN_PASSWORD: the password for the maven repository (optional)
+            No remote cache is added if no GRADLE_REMOTE_BUILD_CACHE_URL is set.
+        """.trimIndent()
+        tags.add("remote build cache")
+    }
     plugins.create("CombinedResolutionPlugin") {
         displayName = "Combined Resolution Plugin"
         id = "com.supcis.resolution"
