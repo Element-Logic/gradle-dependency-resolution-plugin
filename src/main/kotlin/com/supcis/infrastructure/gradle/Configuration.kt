@@ -8,13 +8,13 @@ import org.gradle.authentication.http.HttpHeaderAuthentication
 import org.gradle.internal.jvm.inspection.JvmVendor.KnownJvmVendor
 
 object Configuration {
-    private val MAVEN_AUTHENTICATION = "MAVEN_AUTHENTICATION"
-    private val MAVEN_AUTHENTICATION_VIA_HEADER = "HttpHeader"
-    private val MAVEN_DOWNLOAD_URL = "MAVEN_DOWNLOAD_URL"
-    private val MAVEN_USER = "MAVEN_USER"
-    private val MAVEN_PASSWORD = "MAVEN_PASSWORD"
-    private val GRADLE_REMOTE_BUILD_CACHE_URL = "GRADLE_REMOTE_BUILD_CACHE_URL"
-    private val IS_PUSH_TO_REMOTE_BUILD_CACHE = "PUSH_TO_REMOTE_BUILD_CACHE"
+    private const val MAVEN_AUTHENTICATION = "MAVEN_AUTHENTICATION"
+    private const val MAVEN_AUTHENTICATION_VIA_HEADER = "HttpHeader"
+    private const val MAVEN_DOWNLOAD_URL = "MAVEN_DOWNLOAD_URL"
+    private const val MAVEN_USER = "MAVEN_USER"
+    private const val MAVEN_PASSWORD = "MAVEN_PASSWORD"
+    private const val GRADLE_REMOTE_BUILD_CACHE_URL = "GRADLE_REMOTE_BUILD_CACHE_URL"
+    private const val IS_PUSH_TO_REMOTE_BUILD_CACHE = "PUSH_TO_REMOTE_BUILD_CACHE"
 
     internal val DEFAULT_JDK_VENDOR = KnownJvmVendor.ADOPTIUM
 
