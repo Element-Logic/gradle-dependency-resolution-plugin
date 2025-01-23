@@ -24,7 +24,7 @@ The JDK is expected to be in the form of a maven coordinate:
 
 Add the following lines to the `settings.gradle.kts`:
 
-```settings.gralde.kts
+```settings.gradle.kts
 plugins {
     id("com.supcis.java-toolchain-resolver") version "1.1.0"
 }
@@ -42,7 +42,7 @@ that is configured via environment variables:
 
 Add the following lines to the `settings.gradle.kts`:
 
-```settings.gralde.kts
+```settings.gradle.kts
 plugins {
     id("com.supcis.dependency-resolution") version "1.1.0"
 }
@@ -60,7 +60,7 @@ that is configured via environment variables:
 
 Add the following lines to the `settings.gradle.kts`:
 
-```settings.gralde.kts
+```settings.gradle.kts
 plugins {
     id("com.supcis.plugin-resolution") version "1.1.0"
 }
@@ -86,7 +86,7 @@ You still need to activate the build cache in your project, see
 
 Add the following lines to the `settings.gradle.kts`:
 
-```settings.gralde.kts
+```settings.gradle.kts
 plugins {
     id("com.supcis.remote-build-cache") version "1.1.0"
 }
@@ -100,7 +100,7 @@ The Combined Resolution Plugin is a convenience plugin that applies all the four
 
 Add the following lines to the `settings.gradle.kts`:
 
-```settings.gralde.kts
+```settings.gradle.kts
 plugins {
     id("com.supcis.resolution") version "1.1.0"
 }
