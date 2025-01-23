@@ -1,6 +1,6 @@
 group = "com.supcis.plugins.gradle"
 
-version = "1.0.1"
+version = "1.1.0"
 
 plugins {
     `java-gradle-plugin`
@@ -68,14 +68,34 @@ gradlePlugin {
         """.trimIndent()
         tags.add("plugin resolution")
     }
+    plugins.create("RemoteBuildCachePlugin") {
+        displayName = "Remote Build Cache Plugin"
+        id = "com.supcis.remote-build-cache"
+        implementationClass = "com.supcis.infrastructure.gradle.RemoteBuildCachePlugin"
+        description = """
+            Adds a remote build cache that is configured via environment variables:
+            - GRADLE_REMOTE_BUILD_CACHE_URL: the base URL for the remote build cache
+            - PUSH_TO_REMOTE_BUILD_CACHE: boolean value whether to push to the remote build cache
+              or to use it only for pulling. (optional, default: false)
+            - MAVEN_USER: the username for the maven repository (optional)
+            - MAVEN_PASSWORD: the password for the maven repository (optional)
+            No remote cache is added if no GRADLE_REMOTE_BUILD_CACHE_URL is set.
+        """.trimIndent()
+        tags.add("remote build cache")
+    }
     plugins.create("CombinedResolutionPlugin") {
         displayName = "Combined Resolution Plugin"
         id = "com.supcis.resolution"
         implementationClass = "com.supcis.infrastructure.gradle.CombinedResolutionPlugin"
         description = """
-            Applies all three resolution plugins: JavaToolchainResolver, DependencyResolutionPlugin
-            and PluginResolutionPlugin. This is just for convenience.
+            Applies all four resolution plugins: JavaToolchainResolver, DependencyResolutionPlugin,
+            PluginResolutionPlugin and RemoteBuildCachePlugin. This is just for convenience.
         """.trimIndent()
-        tags.addAll("toolchain resolver", "dependency resolution", "plugin resolution")
+        tags.addAll(
+            "toolchain resolver",
+            "dependency resolution",
+            "plugin resolution",
+            "remote build cache",
+        )
     }
 }

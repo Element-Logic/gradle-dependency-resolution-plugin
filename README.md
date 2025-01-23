@@ -24,9 +24,9 @@ The JDK is expected to be in the form of a maven coordinate:
 
 Add the following lines to the `settings.gradle.kts`:
 
-```settings.gralde.kts
+```settings.gradle.kts
 plugins {
-    id("com.supcis.java-toolchain-resolver") version "1.0.1"
+    id("com.supcis.java-toolchain-resolver") version "1.1.0"
 }
 ```
 
@@ -42,9 +42,9 @@ that is configured via environment variables:
 
 Add the following lines to the `settings.gradle.kts`:
 
-```settings.gralde.kts
+```settings.gradle.kts
 plugins {
-    id("com.supcis.dependency-resolution") version "1.0.1"
+    id("com.supcis.dependency-resolution") version "1.1.0"
 }
 ```
 
@@ -60,27 +60,57 @@ that is configured via environment variables:
 
 Add the following lines to the `settings.gradle.kts`:
 
-```settings.gralde.kts
+```settings.gradle.kts
 plugins {
-    id("com.supcis.plugin-resolution") version "1.0.1"
+    id("com.supcis.plugin-resolution") version "1.1.0"
 }
 ```
 
-### Combined Resolution Plugin
+### Remote Build Cache Plugin
 
-The Combined Resolution Plugin is a convenience plugin that applies all the three plugins above.
+The Remote Build Cache Plugin adds a remote build cache to the gradle configuration.
+The cache is configured via environment variables:
+- GRADLE_REMOTE_BUILD_CACHE_URL: the base URL for the remote build cache (optional)
+- PUSH_TO_REMOTE_BUILD_CACHE: boolean value whether to push to the remote build cache
+  or to use it only for pulling. (optional, default: false)
+- MAVEN_USER: the username for the maven repository (optional)
+- MAVEN_PASSWORD: the password for the maven repository (optional)
+
+No remote cache is added if no `GRADLE_REMOTE_BUILD_CACHE_URL` is set.
+
+You still need to activate the build cache in your project, see
+[gradle user guide](https://docs.gradle.org/current/userguide/build_cache.html).
+
 
 #### How To Use
 
 Add the following lines to the `settings.gradle.kts`:
 
-```settings.gralde.kts
+```settings.gradle.kts
 plugins {
-    id("com.supcis.resolution") version "1.0.1"
+    id("com.supcis.remote-build-cache") version "1.1.0"
+}
+```
+
+### Combined Resolution Plugin
+
+The Combined Resolution Plugin is a convenience plugin that applies all the four plugins above.
+
+#### How To Use
+
+Add the following lines to the `settings.gradle.kts`:
+
+```settings.gradle.kts
+plugins {
+    id("com.supcis.resolution") version "1.1.0"
 }
 ```
 
 # Release History
+
+## 1.1.0 add remote build cache plugin
+
+See description above
 
 ## 1.0.1 fix auth via header
 

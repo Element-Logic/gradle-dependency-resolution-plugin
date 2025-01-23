@@ -13,5 +13,6 @@ abstract class CombinedResolutionPlugin : Plugin<Settings> {
         settings.plugins.apply("com.supcis.plugin-resolution")
         settings.plugins.apply("com.supcis.dependency-resolution")
         settings.plugins.apply("com.supcis.java-toolchain-resolver")
+        settings.plugins.apply("com.supcis.remote-build-cache")
     }
 }
