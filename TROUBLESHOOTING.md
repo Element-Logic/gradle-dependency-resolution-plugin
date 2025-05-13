@@ -20,7 +20,7 @@ Select the "maven-private-releases" repository:
 ![](https://github.com/Element-Logic/gradle-dependency-resolution-plugin/raw/main/images/jfrog_select_repository.png)
 
 You may need to enter your password again:
-![](images/jfrog_token_enter_password.png)
+![](https://raw.githubusercontent.com/Element-Logic/gradle-dependency-resolution-plugin/main/images/jfrog_token_enter_password.png)
 
 Press Generate Token. Your Token is shown. Press Copy to Copy.
 ![](https://raw.githubusercontent.com/Element-Logic/gradle-dependency-resolution-plugin/main/images/jfrog_copy_token.png)
