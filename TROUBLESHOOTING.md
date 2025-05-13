@@ -8,22 +8,22 @@ You need to set the right environment variables, here is how:
 Go to https://suplogistik.jfrog.io/ - You may have to login, with either your EL or SuP account.
 
 On the top right, press your account.
-![](images/jfrog_your_profile.png)
+![](https://github.com/Element-Logic/gradle-dependency-resolution-plugin/raw/main/images/jfrog_your_profile.png)
 
 Then "Set Me Up":
-![](images/jfrog_set_me_up.png)
+![](https://github.com/Element-Logic/gradle-dependency-resolution-plugin/raw/main/images/jfrog_set_me_up.png)
 
 Select "Maven":
-![](images/jfrog_select_maven.png)
+![](https://github.com/Element-Logic/gradle-dependency-resolution-plugin/raw/main/images/jfrog_select_maven.png)
 
 Select the "maven-private-releases" repository:
-![](images/jfrog_select_repository.png)
+![](https://github.com/Element-Logic/gradle-dependency-resolution-plugin/raw/main/images/jfrog_select_repository.png)
 
 You may need to enter your password again:
 ![](images/jfrog_token_enter_password.png)
 
 Press Generate Token. Your Token is shown. Press Copy to Copy.
-![](images/jfrog_copy_token.png)
+![](https://github.com/Element-Logic/gradle-dependency-resolution-plugin/raw/main/images/jfrog_copy_token.png)
 
 ### Set Environment Variables
 
