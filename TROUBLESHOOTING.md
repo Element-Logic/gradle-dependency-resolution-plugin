@@ -5,7 +5,7 @@ You need to set the right environment variables, here is how:
 
 ### Get Token from JFrog
 
-Go to https://suplogistik.jfrog.io/ - You may have to login, with either your EL or SuP account.
+Go to https://repo.sup-logistik.de/ - You may have to login, with either your EL or SuP account.
 
 On the top right, press your account.
 ![](https://raw.githubusercontent.com/Element-Logic/gradle-dependency-resolution-plugin/main/images/jfrog_your_profile.png)
