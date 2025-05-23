@@ -24,7 +24,8 @@ object Configuration {
 
     val downloadUrl: String by lazy {
         System.getenv(MAVEN_DOWNLOAD_URL)
-            ?: throw GradleException("[$MAVEN_DOWNLOAD_URL] has to be set in environment")
+            ?: throw GradleException("[$MAVEN_DOWNLOAD_URL] has to be set in environment" +
+               " - Consult https://github.com/Element-Logic/gradle-dependency-resolution-plugin/blob/main/TROUBLESHOOTING.md for help")
     }
 
     val username: String? by lazy {
