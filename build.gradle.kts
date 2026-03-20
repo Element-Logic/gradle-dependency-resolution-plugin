@@ -7,7 +7,7 @@ plugins {
 
     id("org.jetbrains.kotlin.jvm") version "2.3.20"
 
-    id("com.gradle.plugin-publish") version "2.1.0"
+    id("com.gradle.plugin-publish") version "2.1.1"
 }
 
 java {
