@@ -108,6 +108,12 @@ plugins {
 
 # Release History
 
+## 1.1.1 treat blank env vars as unset
+
+When MAVEN_USERNAME/MAVEN_PASSWORD are unset (aka. `null`), their values are set to the string "x". 
+In case of misconfiguration where empty or whitespace-only strings are set for these variables,
+they are treated the same way as entirely missing and their values are also set to the string "x".
+
 ## 1.1.0 add remote build cache plugin
 
 See description above
