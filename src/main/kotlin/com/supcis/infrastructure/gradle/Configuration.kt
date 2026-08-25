@@ -28,12 +28,12 @@ object Configuration {
                " - Consult https://github.com/Element-Logic/gradle-dependency-resolution-plugin/blob/main/TROUBLESHOOTING.md for help")
     }
 
-    val username: String? by lazy {
-        System.getenv(MAVEN_USER) ?: "x"
+    val username: String by lazy {
+        System.getenv(MAVEN_USER)?.takeIf { it.isNotBlank() } ?: "x"
     }
 
-    val password: String? by lazy {
-        System.getenv(MAVEN_PASSWORD) ?: "x"
+    val password: String by lazy {
+        System.getenv(MAVEN_PASSWORD)?.takeIf { it.isNotBlank() } ?: "x"
     }
 
     val remoteBuildCacheUrl: String? by lazy {
